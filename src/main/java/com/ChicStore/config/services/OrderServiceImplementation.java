@@ -15,11 +15,11 @@ public class OrderServiceImplementation implements OrderService{
 	
 	private CartDao cartDao;
 	//private Address 
-	private CartItemService cartItemService;
+	private CartService cartItemService;
 	private ProductService productService;
 	
 	
-	public OrderServiceImplementation(CartDao cartDao, CartItemService cartItemService, ProductService productService) {
+	public OrderServiceImplementation(CartDao cartDao, CartService cartItemService, ProductService productService) {
 		//super();
 		this.cartDao = cartDao;
 		this.cartItemService = cartItemService;

@@ -18,10 +18,11 @@ public class Reviews {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	// to avoid nested problem
+	private String review;
 
 	@ManyToOne
 	@JoinColumn(name = "product_id")
+	// to avoid nested problem
 	@JsonIgnore
 	private Product product;
 
@@ -36,9 +37,10 @@ public class Reviews {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Reviews(int id, Product product, User user, LocalDateTime createdAt) {
+	public Reviews(int id, String review, Product product, User user, LocalDateTime createdAt) {
 		super();
 		this.id = id;
+		this.review = review;
 		this.product = product;
 		this.user = user;
 		this.createdAt = createdAt;
@@ -52,6 +54,16 @@ public class Reviews {
 		this.id = id;
 	}
 
+	public String getReview()
+	{
+		return review;
+	}
+	
+	public void setReview(String review)
+	{
+		this.review = review;
+	}
+	
 	public Product getProduct() {
 		return product;
 	}

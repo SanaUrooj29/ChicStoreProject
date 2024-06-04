@@ -37,7 +37,7 @@ public class AuthController {
 		this.userDao = userDao;
 		this.passwordEncoder = passwordEncoder;
 		this.cusi = cusi;
-		this.jwtprovider = jwtprovider;
+		//this.jwtprovider = jwtprovider;
 	}
 
 	@PostMapping("/signup")
